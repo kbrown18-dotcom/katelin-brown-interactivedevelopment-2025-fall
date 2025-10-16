@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "Font1";
+  src: url(../font/Mitchel-GO76G.otf) format("woff2");
+}
+
+@font-face {
+  font-family: "Font2";
+  src: url(../font/PoiretOne-Regular.ttf) format("woff2");
+}
+
+h1 {
+  font-family: "Font1";
+}
+body {
+  font-family: 'Font2';
+}
+
+.section-title {
+  font-family: 'Font1';
+  font-size: 45px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.item-name {
+  font-family: 'Font2';
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+  line-height: 1.1;
+}
+
+.item-desc {
+  font-family: 'Font2';
+  font-size: 0.95em;
+  line-height: 1.35; 
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.footer-note {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8em;
+  text-align: center;
+  font-style: italic;
+  margin-top: 25px;
+}
+
+body {
+  margin: 0;
+  background-color: #f0e7d5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.menu-box {
+  width: 850px;
+  height: 1050px;
+  background-color: #fff;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  position: fixed;
+
+  background-image: url(../media/Untitled\ design.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.menu-content {
+  background-image: url(../media/Untitled\ design.jpg);
+  padding: 35px;
+}
+
+.two-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.column {
+  width: 48%;
+}
+
+.menu-item {
+  margin-bottom: 10px;
+}
+
+.price {
+  font-weight: bold;
+}
