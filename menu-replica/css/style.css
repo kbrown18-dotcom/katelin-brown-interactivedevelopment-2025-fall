@@ -19,7 +19,7 @@ body {
   font-family: 'Font1';
   font-size: 45px;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 15px;
   margin-bottom: 15px;
 }
 
@@ -45,7 +45,7 @@ body {
   font-size: 0.8em;
   text-align: center;
   font-style: italic;
-  margin-top: 25px;
+
 }
 
 body {
@@ -54,7 +54,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+    height: 100vh;
 }
 
 .menu-box {
@@ -66,12 +66,12 @@ body {
   position: fixed;
 
   background-image: url(../media/Untitled\ design.jpg);
+   background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
-  background-position: center;
 }
 
 .menu-content {
-  background-image: url(../media/Untitled\ design.jpg);
   padding: 35px;
 }
 
