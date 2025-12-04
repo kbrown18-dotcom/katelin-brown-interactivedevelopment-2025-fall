@@ -1,8 +1,13 @@
-/* Page setup */
+/*FONTS*/
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('../fonts/BebasNeue-Regular.ttf') format('truetype');
+}
+
 body {
   margin: 0;
-  background-color: white;
-  color: black;
+  background-color: #c8ccbe;
+  color: #28463d;
   font-family: 'Bebas Neue', sans-serif;
   display: flex;
   justify-content: center;
@@ -11,7 +16,7 @@ body {
   overflow: hidden;
 }
 
-/* Container to stack lines vertically */
+/* Container */
 .text-container {
   display: flex;
   flex-direction: column;
@@ -21,9 +26,9 @@ body {
   width: 90vw;
 }
 
-/* Each line of text */
+/* line of text */
 .line {
-  font-size: 5vw;
+  font-size: 5rem;
   line-height: 1.1;
   overflow: hidden;
   white-space: nowrap;
@@ -32,12 +37,12 @@ body {
   animation-delay: var(--delay);
 }
 
-/* Typing reveal animation */
+/* Typing reveal */
 @keyframes typing {
   from { width: 0; }
   to { width: 100%; }
 }
-/* Button styling */
+/* Button */
 .button-container {
   position: absolute;
   bottom: 5%;
@@ -46,14 +51,14 @@ body {
 
 .next-button {
   text-decoration: none;
-  font-size: 2vw;
+  font-size: 1.5rem;
   padding: 0.5em 1.5em;
   border: 2px solid currentColor;
   border-radius: 0.25em;
   transition: all 0.3s ease;
+  color: #7c9478;
 }
 
 .next-button:hover {
   opacity: 0.7;
-  transform: scale(1.05);
 }

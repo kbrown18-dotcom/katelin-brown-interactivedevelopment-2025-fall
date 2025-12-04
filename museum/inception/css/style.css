@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  background-color: #c8ccbe;
+  color: #28463d;
+  font-family: 'Bebas Neue', sans-serif;
+  height: 100vh;
+  display: flex;
+}
+
+.layout {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.tabs-panel {
+  width: 12vw;
+  min-width: 90px;
+  background: #b8bdaa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  gap: 1rem;
+}
+
+.tab {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg); 
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  opacity: 0.6;
+  transition: 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.tab.active,
+.tab:hover {
+  opacity: 1;
+  border-left: 3px solid #28463d;
+}
+
+.content-panel {
+  flex-grow: 1;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.content-box {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.content-box.active {
+  display: block; 
+  opacity: 1;
+}
+
+h1 {
+  font-size: 6rem;
+  margin: 0 0 1rem 0;
+}
+
+p {
+  font-size: 2rem;
+  max-width: 60ch;
+  line-height: 1.2;
+}
+
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+

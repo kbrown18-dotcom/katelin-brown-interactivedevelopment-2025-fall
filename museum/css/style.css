@@ -2,8 +2,6 @@
 @font-face {
   font-family: 'Bebas Neue';
   src: url('../fonts/BebasNeue-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
 }
 
 /*PAGE SETUP*/
@@ -18,7 +16,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
   overflow-x: hidden;
-  position: relative;
 }
 
 /*HEADER*/
@@ -50,26 +47,22 @@ header p {
 .film-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-  width: 100%;
-  flex-grow: 1;
-  gap: 0;
+  flex-grow: 1;          /* fill space between header and footer */
   margin: 0;
   padding: 0;
+  gap: 0;                /* can adjust if you want small gaps */
 }
 
 /*FILM BOXES*/
 .film {
+  flex: 1;               /* fill container equally */
   position: relative;
-  height: 86px;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  overflow: hidden;
   transition: transform 0.4s ease, background-color 0.4s ease;
-  flex-shrink: 0;
 }
 
 /*ANIMATED TITLE*/
@@ -102,15 +95,11 @@ header p {
 
 /*SLIDE ANIMATION*/
 @keyframes slideRight {
-  0% {
-    transform: translateX(-100vw);
-  }
-  100% {
-    transform: translateX(100vw);
-  }
+  0% { transform: translateX(-100vw); }
+  100% { transform: translateX(100vw); }
 }
 
-/*DIFFERENT SPEEDS - runtime divided by 5*/
+/*SPEEDS - runtime divided by 5*/
 #memento .title { animation-duration: 22.6s; }
 #inception .title { animation-duration: 29.6s; }
 #interstellar .title { animation-duration: 33.8s; }
@@ -148,12 +137,21 @@ header p {
 footer {
   position: relative;
   width: 100%;
-  background-color: #111;
-  color: #bbb;
+  background-color: #111111;
+  color: #bbbbbb;
   text-align: center;
   padding: 0.5rem;
   font-size: 0.9rem;
   letter-spacing: 0.05em;
-  flex-shrink: 0;
   font-family: 'Montserrat', sans-serif;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+footer a {
+  color: #bbbbbb;       /* matches your footer text color */
+}
+
+footer a:hover {
+  color: #ffffff;        /* optional: change color on hover */
 }

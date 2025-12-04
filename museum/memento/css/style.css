@@ -1,0 +1,37 @@
+/* Reset body and html */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Bebas Neue', sans-serif;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+    background-color: #9e8a7c; /* start with the first page's color */
+  transition: background-color 0.5s;
+}
+
+.page {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+}
+
+#page1 { background-color: #9e8a7c; color: #412a22; }
+#page2 { background-color: #1c1d23; color: #9b9a99; }
+#page3 { background-color: #9e8a7c; color: #412a22; } 
+#page4 { background-color: #1c1d23; color: #9b9a99; } 
+
+.hover-word {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+#page1 .hover-word:hover { color: #6e4d43; }
+#page2 .hover-word:hover { color: #ccd6cb; }
+#page3 .hover-word:hover { color: #6e4d43; }
+#page4 .hover-word:hover { color: #ccd6cb; }

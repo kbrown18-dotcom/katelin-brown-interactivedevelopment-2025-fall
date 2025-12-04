@@ -8,8 +8,8 @@ body {
   align-items: center;
   height: 100vh;
   overflow: hidden;
-  background-color: black;
-  color: white;
+  background-color: #222123;
+  color: #7c9478;
 }
 
 
@@ -19,6 +19,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  text-align: right;
   height: 85vh;
   width: 90vw;
 }
@@ -29,7 +30,7 @@ body {
 
 /* text lines */
 .line {
-  font-size: 5vw;
+  font-size: 5rem;
   line-height: 1.1;
   overflow: hidden;
   white-space: nowrap;
@@ -49,17 +50,18 @@ body {
   display: flex;
   gap: 2rem; /* space between buttons */
   justify-content: center;
+  
 }
 
 .next-button {
   text-decoration: none;
-  font-size: 2vw;
+  font-size: 1.5rem;
   padding: 0.5em 1.5em;
   border: 2px solid currentColor;
   border-radius: 0.25em;
   transition: all 0.3s ease;
+  color: #9ab495;
 }
 .next-button:hover {
   opacity: 0.7;
-  transform: scale(1.05);
 }
