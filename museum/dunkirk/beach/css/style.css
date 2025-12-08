@@ -38,7 +38,7 @@ h1 {
 }
 
 .number {
-  font-size: 4rem; /* bigger for visual balance */
+  font-size: 4rem;
   display: block;
 }
 
@@ -46,7 +46,6 @@ h1 {
   font-size: 1.5rem;
 }
 
-/* Side Tabs */
 .tab {
   position: fixed;
   top: 50%;

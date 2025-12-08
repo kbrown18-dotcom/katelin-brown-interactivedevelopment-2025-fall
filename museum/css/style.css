@@ -47,15 +47,15 @@ header p {
 .film-container {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;          /* fill space between header and footer */
+  flex-grow: 1;
   margin: 0;
   padding: 0;
-  gap: 0;                /* can adjust if you want small gaps */
+  gap: 0;
 }
 
 /*FILM BOXES*/
 .film {
-  flex: 1;               /* fill container equally */
+  flex: 1;
   position: relative;
   display: flex;
   align-items: center;
@@ -149,9 +149,9 @@ footer {
 }
 
 footer a {
-  color: #bbbbbb;       /* matches your footer text color */
+  color: #bbbbbb;
 }
 
 footer a:hover {
-  color: #ffffff;        /* optional: change color on hover */
+  color: #ffffff;
 }

@@ -1,4 +1,9 @@
-/* Reset body and html */
+/*FONTS*/
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('../fonts/BebasNeue-Regular.ttf') format('truetype');
+}
+
 body, html {
   margin: 0;
   padding: 0;
@@ -6,7 +11,7 @@ body, html {
   height: 100%;
   width: 100%;
   overflow: hidden;
-    background-color: #9e8a7c; /* start with the first page's color */
+    background-color: #9e8a7c;
   transition: background-color 0.5s;
 }
 

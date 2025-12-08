@@ -54,7 +54,6 @@ $(function() {
 
   // Function to activate a tab
   function activateTab(target) {
-    // Remove active classes
     $tabs.removeClass('active');
     $boxes.removeClass('active');
 
@@ -77,9 +76,7 @@ $(function() {
       'border-bottom-color': 'transparent'
     });
 
-    // Desktop
     $activeTab.css('border-left-color', c.border);
-    // Mobile
     if (window.innerWidth <= 500) {
       $activeTab.css('border-bottom-color', c.border);
     }
@@ -95,9 +92,32 @@ $(function() {
   var initialTab = $tabs.filter('.active').data('target');
   if (initialTab) activateTab(initialTab);
 
-  // resize
   $(window).on('resize', function() {
     var activeTarget = $tabs.filter('.active').data('target');
     if (activeTarget) activateTab(activeTarget);
   });
+});
+
+
+$(document).ready(function () {
+  function logSizes() {
+    console.clear();
+
+    console.log("Layout:", $(".layout").outerWidth(), "x", $(".layout").outerHeight());
+    console.log("Tabs Panel:", $(".tabs-panel").outerWidth(), "x", $(".tabs-panel").outerHeight());
+    console.log("Content Panel:", $(".content-panel").outerWidth(), "x", $(".content-panel").outerHeight());
+
+    $(".content-box").each(function () {
+      console.log(
+        "Content Box #" + this.id + ":",
+        $(this).outerWidth(),
+        "x",
+        $(this).outerHeight()
+      );
+    });
+  }
+
+  logSizes();
+
+  $(window).on("resize", logSizes);
 });

@@ -1,3 +1,9 @@
+/*FONTS*/
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('../fonts/BebasNeue-Regular.ttf') format('truetype');
+}
+
 /* yup */
 body {
   margin: 0;
@@ -48,7 +54,7 @@ body {
 /* buttons */
 .button-container.two-buttons {
   display: flex;
-  gap: 2rem; /* space between buttons */
+  gap: 2rem;
   justify-content: center;
   
 }
