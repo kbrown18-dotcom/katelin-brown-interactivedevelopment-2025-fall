@@ -78,12 +78,12 @@ body {
 .two-columns {
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  gap: 2rem;
   margin-bottom: 30px;
 }
 
 .column {
-  width: 48%;
+  width: calc(50% - 1rem); 
 }
 
 .menu-item {

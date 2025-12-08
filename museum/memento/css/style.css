@@ -24,12 +24,9 @@ body, html {
   align-items: center;
   text-align: center;
   font-size: 3rem;
+  color: inherit; 
 }
 
-#page1 { background-color: #9e8a7c; color: #412a22; }
-#page2 { background-color: #1c1d23; color: #9b9a99; }
-#page3 { background-color: #9e8a7c; color: #412a22; } 
-#page4 { background-color: #1c1d23; color: #9b9a99; } 
 
 .hover-word {
   cursor: pointer;
