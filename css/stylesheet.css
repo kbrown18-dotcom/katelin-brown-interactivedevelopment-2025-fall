@@ -1,62 +1,69 @@
 
-    @font-face {
-        font-family: "Pixel";
-        src: url("../css/Pixel-y14Y.ttf") format("woff2");
-    }
+html {
+  font-size: 1rem; 
+  line-height: 1.4;
+}
+
+@font-face {
+  font-family: "Pixel";
+  src: url("../css/Pixel-y14Y.ttf") format("woff2");
+}
+
+@font-face {
+  font-family: "PixelWestern";
+  src: url("../css/PixelCowboy-l7we.ttf") format("woff2");
+}
 
 body {
   background-color: #EAEBE5;
   background-image: url('../media/backgroundagain.jpg');
   background-size: cover;
   background-position: center;
-  height:100vh;
+  height: 100vh;
   font-family: 'Pixel', sans-serif;
   margin: 0;
-  padding: 40px;
+  padding: calc(40rem / 16);
   text-align: center;
 }
 
 .welcome {
   color: #A49394;
-  font-size: 24px;
+  font-size: calc(24rem / 16);
   margin-bottom: 0;
 }
+
 .p {
-color: #A49394;
-
+  color: #A49394;
 }
+
 .p2 {
-color: #A49394;
-font-size: 10px;
+  color: #A49394;
+  font-size: calc(10rem / 16);
 }
 
-    @font-face {
-        font-family: "PixelWestern";
-        src: url("../css/PixelCowboy-l7we.ttf") format("woff2");
-    }
 .homepage-title {
   font-family: 'PixelWestern', serif;
-  font-size: 60px;
-  margin-bottom: 20px;
-  margin-top: 5px;
+  font-size: calc(60rem / 16);
+  margin-bottom: calc(20rem / 16);
+  margin-top: calc(5rem / 16);
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 130px); 
-  gap: 15px;
-  justify-content: center; 
+  grid-template-columns: repeat(3, calc(130rem / 16));
+  gap: calc(15rem / 16);
+  justify-content: center;
   margin: 0 auto;
 }
 
 .grid-item {
   position: relative;
-  width: 110px;
-  height: 110px;
+  width: calc(110rem / 16);
+  height: calc(110rem / 16);
   background-color: #A49394;
-  border-radius: 10px;
+  border-radius: calc(10rem / 16);
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 calc(2rem / 16) calc(6rem / 16) rgba(0,0,0,0.1);
   text-decoration: none;
   color: black;
   transition: all 0.3s ease;
@@ -76,8 +83,8 @@ font-size: 10px;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
-  font-size: 13px;
-  padding: 4px 0;
+  font-size: calc(13rem / 16);
+  padding: calc(4rem / 16) 0;
   box-sizing: border-box;
 }
 
@@ -88,15 +95,22 @@ font-size: 10px;
 }
 
 .grid-item:hover .grid-text {
-  background-color: rgba(164, 147, 148, 0.9); 
+  background-color: rgba(164, 147, 148, 0.9);
   color: white;
 }
+
 
 .sparkle {
   position: absolute;
   pointer-events: none;
   color: #c3b3b4;
   font-family: Pixel;
-  font-size: 14px;
+  font-size: calc(14rem / 16);
   opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(2, calc(130rem / 16));
+  }
 }
