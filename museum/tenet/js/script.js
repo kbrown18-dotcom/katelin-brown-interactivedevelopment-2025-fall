@@ -1,32 +1,84 @@
-$(function () {
-  function reportSizes() {
-    console.clear();
+$(document).ready(function () {
 
-    console.log("BODY:", {
-      width: $("body").width(),
-      height: $("body").height()
-    });
+  const pageOne = [
+    "For me,",
+    "I think this is the end",
+    "of a beautiful friendship."
+  ];
 
-    console.log("TEXT CONTAINER:", {
-      width: $(".text-container").width(),
-      height: $(".text-container").height()
-    });
+  const pageTwo = [
+    "But for me,",
+    "it's just",
+    "the beginning."
+  ];
 
-    $(".line").each(function (i) {
-      console.log("LINE " + (i + 1) + ":", {
-        width: $(this).width(),
-        height: $(this).height()
-      });
-    });
+  let currentPage = 1;
+  const lines = $(".line");
+  let lineIndex = 0;
+  let charIndex = 0;
+  let textArray = pageOne;
+  let currentText = "";
 
-    console.log("BUTTON CONTAINER:", {
-      width: $(".button-container").width(),
-      height: $(".button-container").height()
-    });
+  function resetLines() {
+    lines.text("").css("opacity", 0);
+    lineIndex = 0;
+    charIndex = 0;
+    currentText = "";
   }
 
-  reportSizes();
+  function typeLine() {
+    const line = lines.eq(lineIndex);
+    const fullText = textArray[lineIndex];
 
+    line.css("opacity", 1);
 
-  $(window).on("resize", reportSizes);
+    if (charIndex < fullText.length) {
+      currentText += fullText.charAt(charIndex);
+      line.text(currentText);
+      charIndex++;
+      setTimeout(typeLine, 50);
+    } else {
+      lineIndex++;
+      charIndex = 0;
+      currentText = "";
+
+      if (lineIndex < textArray.length) {
+        setTimeout(typeLine, 600);
+      }
+    }
+  }
+
+  // page one starts
+  typeLine();
+
+  $("#nextBtn").on("click", function (e) {
+    e.preventDefault();
+
+    if (currentPage === 1) {
+      currentPage = 2;
+      textArray = pageTwo;
+
+      $(".text-container").addClass("right-align");
+      $("body").css({
+        backgroundColor: "#222123",
+        color: "#7c9478"
+      });
+
+      resetLines();
+      typeLine();
+
+      $(".button-container").html(`
+        <a href="#" class="next-button" id="restartBtn">Restart</a>
+        <a href="../../index.html" class="next-button">Lobby</a>
+      `);
+
+      $(".button-container").addClass("two-buttons");
+    }
+  });
+
+  $(document).on("click", "#restartBtn", function (e) {
+    e.preventDefault();
+    location.reload();
+  });
+
 });

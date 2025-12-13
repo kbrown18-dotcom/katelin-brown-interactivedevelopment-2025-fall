@@ -71,7 +71,7 @@ header p {
   margin-top: 6px;
   white-space: nowrap;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 5rem;
+    font-size: clamp(2.5rem, 8vw, 5rem);
   color: #cac9c9;
   opacity: 0.9;
   animation-name: slideRight;
